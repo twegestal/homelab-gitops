@@ -97,7 +97,7 @@ If someone changes the cluster by hand, Flux reverts it to what is declared in G
 
 - [x] Local k3d cluster with Flux bootstrap
 - [x] First application deployed with a HelmRelease and exposed through Ingress
-- [ ] `infrastructure/` layer with Prometheus and Grafana, deployed before apps
+- [x] `infrastructure/` layer with Prometheus and Grafana, deployed before apps
 - [ ] Own application with its own Helm chart and CI pipeline
 - [ ] Flux image automation for automatic deploys of new image tags
 - [ ] Secrets management with SOPS
