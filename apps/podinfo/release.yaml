@@ -21,3 +21,5 @@ spec:
           paths:
             - path: /
               pathType: ImplementationSpecific
+    serviceMonitor:
+      enabled: true
