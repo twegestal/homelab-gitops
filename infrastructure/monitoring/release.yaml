@@ -9,6 +9,7 @@ spec:
   chart:
     spec:
       chart: kube-prometheus-stack
+      version: '93.6.0'
       sourceRef:
         kind: HelmRepository
         name: prometheus-community
@@ -18,8 +19,7 @@ spec:
     crds: CreateReplace
   values:
     alertmanager:
-      enabled: false          # inte nödvändig i labbet, sparar minne
-    # k3s kör dessa inbyggt och exponerar dem inte, så stäng av för att slippa falska larm
+      enabled: false
     kubeEtcd:
       enabled: false
     kubeControllerManager:
@@ -31,7 +31,6 @@ spec:
     prometheus:
       prometheusSpec:
         retention: 2d
-        # plocka upp ServiceMonitors från alla appar, inte bara från detta chart
         serviceMonitorSelectorNilUsesHelmValues: false
         podMonitorSelectorNilUsesHelmValues: false
     grafana:
